@@ -127,3 +127,14 @@ Result
     }
 }
 ```
+
+#### Troubleshooting
+
+1.virtual memory areas vm.max_map_count [65530] is too low
+
+The vm.max_map_count setting should be set permanently in /etc/sysctl.conf or /etc/sysctl.d/?.conf:
+
+```bash
+$ grep vm.max_map_count /etc/sysctl.conf
+vm.max_map_count=262144
+```
